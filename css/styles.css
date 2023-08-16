@@ -282,6 +282,18 @@ button {
   padding: 120px 0;
 }
 
+.benefits-icons-box {
+  background-color: #f4f4fd;
+  border-radius: 4px;
+  width: 264px;
+  height: 112px;
+  flex-shrink: 0;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .benefits-list-subtitle {
   color: var(--navyblue);
   margin-bottom: 8px;
@@ -352,11 +364,19 @@ button {
   background: var(--white);
   flex-basis: calc((100% - 72px) / 4);
   border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 .team-content {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding: 32px 0;
+  display: flex;
+  width: 232px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
 }
 
 .team-list-subtitle {
@@ -379,6 +399,39 @@ button {
   letter-spacing: 0.02em;
 }
 
+.team-sm-icons-link {
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-sm-icons-link:hover,
+.team-sm-icons-link:focus {
+  background-color: #404bbf;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-sm-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.team-sm-icons-item {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-sm-icons-logo {
+  fill: var(--iris);
+}
 /* filters section */
 
 .product {
@@ -480,7 +533,7 @@ button {
 }
 .backdrop.is-hidden.modal {
   opacity: 0;
-  transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-70%);
 }
 
 .backdrop {
@@ -501,7 +554,7 @@ button {
   width: 408px;
   min-height: 584px;
   border-radius: 4px;
-  background: var(--dairy);
+  background: #fcfcfc;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -515,8 +568,10 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #e7e9fc;
+  border: none;
   padding: 0;
-  background-color: var(--cornflower);
+
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
@@ -527,4 +582,10 @@ button {
 
 .modal-button-icon {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-button:hover,
+.modal-button:focus {
+  background-color: #404bbf;
+  border: none;
+  fill: #ffffff;
 }
