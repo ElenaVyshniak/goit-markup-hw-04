@@ -94,6 +94,8 @@ main {
 
 .header {
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-flex .container {
@@ -102,6 +104,10 @@ main {
   margin: 0 auto;
   width: 100%;
   display: flex;
+}
+
+.nav-link.current {
+  color: #404bbf;
 }
 
 .link {
@@ -153,11 +159,29 @@ img {
   padding: 24px 0;
   display: block;
   color: var(--navyblue);
+  position: relative;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+}
+
+.nav-link.current::after {
+  background-color: #404bbf;
 }
 
 .nav-link:hover,
 .nav-link:focus {
   color: var(--ocean);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address {
@@ -449,19 +473,25 @@ button {
   max-width: 264px;
 }
 
-.backdrop .is-hidden {
+.backdrop.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
+.backdrop.is-hidden.modal {
+  opacity: 0;
+  transform: translateX(-50%) translateY(-50%);
+}
 
 .backdrop {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(46, 47, 66, 0.4);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal {
   position: absolute;
@@ -474,6 +504,7 @@ button {
   background: var(--dairy);
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-button {
   position: absolute;
@@ -495,7 +526,5 @@ button {
 }
 
 .modal-button-icon {
-  width: 8px;
-  height: 8px;
-  flex-shrink: 0;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
