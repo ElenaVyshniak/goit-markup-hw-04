@@ -80,7 +80,14 @@ main {
 
 .address-items {
   display: flex;
+  justify-content: end;
   gap: 40px;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--gray);
+  text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .advan-list {
@@ -195,9 +202,14 @@ img {
 }
 
 .address-link {
-  color: var(--slate);
+  justify-content: end;
+  gap: 40px;
+  font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  color: var(--gray);
+  text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-link:hover,
@@ -259,6 +271,7 @@ button {
   text-align: center;
   min-width: 169px;
   cursor: pointer;
+  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:hover,
@@ -627,6 +640,7 @@ link:hover .overlay {
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
+/* Footer */
 
 .footer-section {
   background: #2e2f42;
@@ -691,6 +705,11 @@ link:hover .overlay {
 .socialmedia-container {
   display: block;
   margin-left: 120px;
+}
+
+.webstudio-container {
+  display: block;
+    margin-right: 120px;
 }
 
 .footer-socialmedias {
