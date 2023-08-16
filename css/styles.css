@@ -407,6 +407,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 8px;
 }
 
 .team-sm-icons-link:hover,
@@ -430,6 +431,7 @@ button {
 }
 
 .team-sm-icons-logo {
+  fill: #f4f4fd;
 }
 
 .team-sm-icons-logo:hover,
@@ -629,7 +631,7 @@ button {
 }
 
 .socialmedia-container {
-  display: block;
+  display: flex;
   width: 208px;
   height: 80px;
   flex-shrink: 0;
