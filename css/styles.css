@@ -585,6 +585,10 @@ button {
   margin: 0 auto;
   border-radius: 0;
 }
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
 
 .footer-section .logo {
   display: inline-block;
@@ -600,6 +604,7 @@ button {
   font-size: 16px;
   font-style: normal;
   line-height: 1.5;
+  letter-spacing: 0.32px;
   max-width: 264px;
 }
 
@@ -611,7 +616,6 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
   margin-bottom: 16px;
-  gap: 16px;
 }
 
 .footer-sm-link {
@@ -631,10 +635,8 @@ button {
 }
 
 .socialmedia-container {
-  display: flex;
-  width: 208px;
-  height: 80px;
-  flex-shrink: 0;
+  display: block;
+  margin-left: 120px;
 }
 
 .footer-socialmedias {
@@ -642,6 +644,9 @@ button {
   gap: 16px;
 }
 .footer-socialmedia-item {
+  width: 40px;
+  height: 40px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-socialmedia-item:hover,
@@ -650,7 +655,7 @@ button {
 
 .footer-socialmedia-logo {
   fill: #f4f4fd;
-  margin: 8px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Modal windows */
