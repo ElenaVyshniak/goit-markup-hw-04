@@ -592,8 +592,8 @@ button {
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
-.portfolio-a:hover.overlay,
-.portfolio-a:focus.overlay {
+.portfolio-a:hover .overlay,
+.portfolio-a:focus .overlay {
  transform: translateY(0%);
 }
 
